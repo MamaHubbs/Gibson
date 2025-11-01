@@ -1,0 +1,163 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #fff;
+    border-bottom: 2px solid #ddd;
+}
+
+header img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.location {
+    font-size: 0.8em; /* Makes the font size smaller */
+    color: #000;      /* Sets the text color to black */
+    margin-top: -15px; /* Pulls the text up closer to the paragraph above */
+}
+
+main {
+    max-width: 80%;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+section {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+    text-align: center;
+    color: #007bff;
+}
+
+.photo-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.photo-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.btn-link {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+.btn-link:hover {
+    background-color: #0056b3;
+}
+
+/* -------------------------------
+   Tables
+--------------------------------*/
+
+/* Normal table (with left padding 25px) */
+table.normal {
+    width: 90%; 
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+    table-layout: fixed;
+}
+
+table.normal td {
+    padding: 5px;
+    padding-left: 35px; /* only this table has extra left padding */
+    border: 0px solid #ddd;
+    text-align: left;
+}
+
+table.normal tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Small and large tables (no extra left padding) */
+.table-small,
+.table-large {
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+    table-layout: fixed;
+}
+
+.table-small { width: 60%; }
+.table-large { width: 90%; }
+
+.table-small td,
+.table-large td {
+    padding: 5px; /* even padding */
+    border: 0px solid #ddd;
+    text-align: left;
+}
+
+.table-small tr:nth-child(even),
+.table-large tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Scroll container */
+.table-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.table-scroll table {
+    min-width: 640px; /* adjust if more columns */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .table-small,
+    .table-large,
+    table.normal {
+        width: 100%;
+        table-layout: auto;
+    }
+
+    .table-small td,
+    .table-large td,
+    table.normal td {
+        padding: 8px;
+        padding-left: unset; /* only the "normal" one keeps its padding-left */
+    }
+
+    table.normal td {
+        padding-left: 25px; /* keep this on mobile */
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #777;
+    border-top: 1px solid #ddd;
+    margin-top: 20px;
+}
