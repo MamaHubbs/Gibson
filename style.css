@@ -58,12 +58,18 @@ h1, h2 {
     border-radius: 8px;
 }
 
-.photo-container dna {
+.photo-container--narrow {
     width: 60%;
+    margin: 0 auto; /* centers horizontally */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.photo-container--narrow img {
+    width: 100%;
     height: auto;
-    align: center;
-    margin-right: 20%;
-    margin-left: 20%;
+    border-radius: 8px;
 }
 
 .btn-link {
